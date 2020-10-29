@@ -25,7 +25,7 @@ namespace SkillsTracker.Controllers
 
         public IActionResult Form()
         {
-            string html = "<form method = 'post' action = '/skills/form/'>" +
+            string html = "<form method = 'post' action = '/skills/progress/'>" +
                 "<input type='date' label='Date: ' name='date'/>" +
                 "<br>" +
                 "<label for='csharp'>" + "C#:" + "</label>" +
@@ -55,7 +55,7 @@ namespace SkillsTracker.Controllers
         }
 
         [HttpPost]
-        public IActionResult Form(string date, string csharp, string javaScript, string python)
+        public IActionResult Progress(string date, string csharp, string javaScript, string python)
         {
             string html =
                 "<h1>" + date + "</h1>" +
