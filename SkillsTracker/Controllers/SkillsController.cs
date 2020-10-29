@@ -57,12 +57,28 @@ namespace SkillsTracker.Controllers
         [HttpPost]
         public IActionResult Form(string date, string csharp, string javaScript, string python)
         {
-            string html ="<h1>" + date + "</h1>" +
-                "<ol>" +
-                "<li>" + "C#: " + csharp + "</li>" +
-                "<li>" + "JavaScript: " + javaScript + "</li>" +
-                "<li>" + "Python: " + python + "</li>" +
-                "</ol>";
+            string html =
+                "<h1>" + date + "</h1>" +
+                //"<ol>" +
+                //"<li>" + "C#: " + csharp + "</li>" +
+                //"<li>" + "JavaScript: " + javaScript + "</li>" +
+                //"<li>" + "Python: " + python + "</li>" +
+                //"</ol>";
+
+                "<table>" +
+                "<tr>" +
+                "<td>" + "C#: " + "</td>" +
+                "<td>" + csharp + "</td>" +
+                "</tr>" +
+                "<tr>" +
+                "<td>" + "JavaScript: " + "</td>" +
+                "<td>" + javaScript + "</td>" +
+                "</tr>" +
+                "<tr>" +
+                "<td>" + "Python: " + "</td>" +
+                "<td>" + python + "</td>" +
+                "</tr>" +
+                "</table>";
             return Content(html, "text/html");
         }
     }
